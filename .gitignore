@@ -1,0 +1,48 @@
+# Visual Studio 和编辑器缓存
+.vs/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# .NET 构建产物
+[Bb]in/
+[Oo]bj/
+TestResults/
+*.nupkg
+
+# 前端依赖和构建产物
+node_modules/
+dist/
+dist-ssr/
+coverage/
+*.tsbuildinfo
+.eslintcache
+
+# 日志
+logs/
+*.log
+
+# 本地环境配置和密钥
+.env
+.env.*
+!.env.example
+appsettings.*.local.json
+secrets.json
+*.pem
+*.key
+*.pfx
+*.p12
+
+# 本地上传文件
+ECP/ECP.Api/Uploads/
+
+# 操作系统文件
+.DS_Store
+Thumbs.db
+
+# 本地项目说明文档
+/提示词_1106.md
+/ECP_MySQL_Tables_1106.md
+/ECP_Project_Guide_1106.md
