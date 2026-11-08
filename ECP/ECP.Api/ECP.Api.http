@@ -1,0 +1,6 @@
+@ECP.Api_HostAddress = http://localhost:5226
+
+GET {{ECP.Api_HostAddress}}/api/test
+Accept: application/json
+
+###
