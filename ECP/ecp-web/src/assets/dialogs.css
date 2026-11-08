@@ -1,0 +1,111 @@
+/* 弹窗被 Teleport 到 body，外壳样式使用项目专属类名全局限定 */
+.ecp-dialog.el-dialog {
+  display: flex;
+  flex-direction: column;
+  max-width: calc(100% - 32px);
+  max-height: calc(100dvh - 48px);
+  margin: auto;
+  padding: 0;
+  border-radius: 10px;
+}
+
+.ecp-dialog > .dialog-header {
+  flex-shrink: 0;
+  margin: 0;
+  padding: 20px 52px 18px 24px;
+  border-bottom: 1px solid var(--el-border-color-lighter);
+}
+
+.ecp-dialog .ecp-dialog-title {
+  margin: 0;
+  font-size: var(--el-dialog-title-font-size);
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+
+.ecp-dialog .ecp-dialog-description {
+  margin: 6px 0 0;
+  color: var(--el-text-color-secondary);
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+
+.ecp-dialog > .dialog-body {
+  flex: 1;
+  min-height: 0;
+  padding: 24px;
+  overflow-y: auto;
+  overflow-wrap: anywhere;
+}
+
+.ecp-dialog > .dialog-footer {
+  display: flex;
+  flex: 0 0 auto;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 16px 24px;
+  border-top: 1px solid var(--el-border-color-lighter);
+}
+
+.ecp-dialog .dialog-footer .el-button + .el-button {
+  margin-left: 0;
+}
+
+/* 保留规格管理左右列表各自滚动的布局 */
+.ecp-dialog.specification-manager-dialog {
+  height: min(720px, calc(100dvh - 48px));
+}
+
+.ecp-dialog.specification-manager-dialog > .dialog-body {
+  display: flex;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.ecp-message-box.el-message-box {
+  width: 440px;
+  max-width: calc(100% - 32px);
+  max-height: calc(100dvh - 48px);
+  overflow-y: auto;
+}
+
+.ecp-message-content {
+  overflow-wrap: anywhere;
+}
+
+.ecp-message-content p {
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+.ecp-message-content .ecp-message-context {
+  margin-bottom: 8px;
+  color: var(--el-text-color-secondary);
+  font-size: 12px;
+}
+
+.ecp-message-content .ecp-message-error {
+  margin-top: 12px;
+  color: var(--el-color-danger);
+}
+
+@media (max-width: 600px) {
+  .ecp-dialog > .dialog-header {
+    padding: 18px 48px 16px 20px;
+  }
+
+  .ecp-dialog > .dialog-body,
+  .ecp-dialog > .dialog-footer {
+    padding: 18px 20px;
+  }
+}
+
+/* 窗口过低时允许规格管理整体滚动，保证操作区可访问 */
+@media (max-height: 520px), (max-width: 760px) and (max-height: 700px) {
+  .ecp-dialog.specification-manager-dialog > .dialog-body {
+    display: block;
+    overflow: auto;
+  }
+}

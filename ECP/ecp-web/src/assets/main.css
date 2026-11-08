@@ -1,0 +1,18 @@
+@import './base.css';
+
+/* 根容器铺满窗口，页面内部自行控制内容最大宽度 */
+#app {
+  display: block;
+  width: 100%;
+  min-height: 100vh;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* 使用键盘操作链接和按钮时，显示清晰的焦点 */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #93b6ff;
+  outline-offset: 4px;
+}
